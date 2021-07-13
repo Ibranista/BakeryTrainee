@@ -1,14 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import './index.css';
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+// core styles
+import "./scss/volt.scss";
+
+// vendor styles
+import "@fortawesome/fontawesome-free/css/all.css";
+import "react-datetime/css/react-datetime.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <>
+      <Router>
+        <ScrollToTop />
+      </Router>
+      <App />
+    </>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
