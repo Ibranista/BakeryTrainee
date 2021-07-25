@@ -36,6 +36,13 @@ class Navbars extends Component {
     console.log("user: ", user);
     console.log(user.role);
     return (
+      <>
+<Container>
+      <Row>
+
+      <Col lg={3}></Col>
+      <Col lg={7}>
+
       <Navbar variant="dark" expanded className="ps-0 pe-2 pb-0 ">
         <Container fluid className="px-0">
           <div className="d-flex justify-content-sm-between w-100">
@@ -73,11 +80,11 @@ class Navbars extends Component {
                     <FontAwesomeIcon
                       icon={faSignOutAlt}
                       className="text-danger me-2"
-                    />{" "}
+                      />{" "}
                     <button
                       onClick={this.onLogoutClick}
                       className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                    >
+                      >
                       Logout
                     </button>
                   </Dropdown.Item>
@@ -87,6 +94,10 @@ class Navbars extends Component {
           </div>
         </Container>
       </Navbar>
+                        </Col>
+</Row>
+</Container>
+      </>
     );
   }
 }

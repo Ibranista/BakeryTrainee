@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./adminLte/plugins/jvectormap/jquery-jvectormap-1.2.2.css";
+import "./adminLte/dist/css/AdminLTE.min.css";
+import "./adminLte/dist/css/skins/_all-skins.min.css";
 // import './index.css';
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // core styles
 import "./scss/volt.scss";
+// Admin Lte
 
 // vendor styles
 import "@fortawesome/fontawesome-free/css/all.css";

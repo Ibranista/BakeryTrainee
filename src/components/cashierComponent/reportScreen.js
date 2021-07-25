@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Container, Row, Col, Form , Button} from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import Sidebar from "../Sidebar";
 
 class ReportScreen extends Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class ReportScreen extends Component {
   render() {
     return (
       <>
+        <Sidebar />
+
         <Container>
           <Row>
             <Col lg={3}></Col>

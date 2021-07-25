@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import Sidebar from "../Sidebar";
 import axios from "axios";
 
 // personal styles
@@ -28,6 +29,7 @@ class ReportedScreen extends Component {
   render() {
     return (
       <>
+      <Sidebar/>
         <Container>
           <Row>
             <Col lg={2}></Col>

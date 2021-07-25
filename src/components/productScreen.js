@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Message } from "./Message.js";
 import { Loader } from "./Loader.js";
 import { Form } from "react-bootstrap";
+import Sidebar from "./Sidebar.js";
 import {
   Container,
   Row,
@@ -19,10 +20,13 @@ class DisplayProducts extends Component {
   render() {
     return (
       <>
-        <Row><Col lg={4}></Col>
+        <Sidebar />
+
+        <Row>
+          <Col lg={4}></Col>
           <Col>
             {" "}
-            <Link to="/dashboard/products/registerProduct">
+            <Link to="/registerProduct">
               Add new product
             </Link>
           </Col>

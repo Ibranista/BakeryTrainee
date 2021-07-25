@@ -3,6 +3,7 @@ import moment from "moment-timezone";
 import Datetime from "react-datetime";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import Sidebar from "../Sidebar";
 import {
   Col,
   Row,
@@ -50,6 +51,7 @@ class RegisterProduct extends Component {
   render() {
     return (
       <>
+      <Sidebar/>
         <Container>
           <Row>
             <Col lg={3}>hello</Col>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Sidebar from "./components/Sidebar";
 import { Switch } from "react-router-dom";
-import Landingpage from "./components/Landingpage.js";
 import Navbar from "./components/Navbar";
 class Dashboard extends Component {
   constructor(props) {
@@ -13,7 +12,6 @@ class Dashboard extends Component {
       <>
         <Sidebar />
         <Navbar className="" />
-        <Landingpage />
       </>
     );
   }

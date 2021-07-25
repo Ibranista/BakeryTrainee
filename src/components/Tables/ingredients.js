@@ -21,6 +21,8 @@ import {
   ButtonGroup,
 } from "@themesberg/react-bootstrap";
 
+import Sidebar from "../Sidebar";
+
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -58,6 +60,7 @@ class Ingredients extends Component {
     const { ingredients } = this.state;
     return (
       <>
+      <Sidebar/>
         <Container>
           <Row>
             <Col lg={3}></Col>

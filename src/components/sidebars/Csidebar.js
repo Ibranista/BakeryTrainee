@@ -184,22 +184,27 @@ const SideBar = (props = {}) => {
               <NavItem
                 title="View Products"
                 icon={faCog}
-                link="/dashboard/products"
+                link="/products"
               />
               <NavItem
                 title="Product Ingredients"
                 icon={faCog}
-                link="/dashboard/ingredients"
+                link="/ingredients"
               />
               <NavItem
                 title="Report Sold Products"
                 icon={faCog}
-                link="/dashboard/reportScreen"
+                link="/reportScreen"
               />
               <NavItem
-                title="Curiour Payments"
+                title="Courier Payments"
                 icon={faCar}
-                link="/dashboard/reportScreen"
+                link="/Courierpayment"
+              />
+              <NavItem
+                title="Payroll Management"
+                icon={faCar}
+                link="/payroll"
               />
 
               <Dropdown.Divider className="my-3 border-indigo" />

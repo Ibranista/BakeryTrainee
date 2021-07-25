@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Container, Row, Col, Accordion, Card, Button } from "react-bootstrap";
-
+import Sidebar from "../Sidebar";
 // personal styles
 var divStyle = {
   margin: "8% 8%",
@@ -15,6 +15,7 @@ class ProductHistory extends Component {
   render() {
     return (
       <>
+      <Sidebar/>
         <Container>
           <Row>
             <Col lg={2}></Col>
