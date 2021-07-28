@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAngleLeft,
   faEnvelope,
   faUnlockAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -36,6 +35,7 @@ class Signin extends Component {
       email: "",
       password: "",
       errors: {},
+    
     };
   }
 
@@ -81,12 +81,7 @@ class Signin extends Component {
       <main>
         <section className="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
           <Container>
-            <p className="text-center">
-              <Card.Link as={Link} to={"/"} className="text-gray-700">
-                <FontAwesomeIcon icon={faAngleLeft} className="me-2" /> Back to
-                homepage
-              </Card.Link>
-            </p>
+   
             <Row
               className="justify-content-center form-bg-image"
               style={{ backgroundImage: `url(${BgImage})` }}
@@ -97,7 +92,7 @@ class Signin extends Component {
               >
                 <div className="bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                   <div className="text-center text-md-center mb-4 mt-md-0">
-                    <h3 className="mb-0">Sign in to our platform</h3>
+                    <h3 className="mb-0">Sign in to ZAD App</h3>
                   </div>
                   <Form onSubmit={this.onSubmit} className="mt-4">
                     <Form.Group id="email" className="mb-4">

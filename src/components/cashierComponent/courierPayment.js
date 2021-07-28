@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Sidebar from "../Sidebar";
 import Navbar from "../Navbar";
 
-class payrollScreen extends Component {
+class CourierScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +38,7 @@ class payrollScreen extends Component {
               <div className="col-xs-12">
                 <div className="box">
                   <div className="box-header">
-                    <h3 className="box-title">PayRoll</h3>
+                    <h3 className="box-title">Courier's Payment</h3>
                   </div>
                   <div className="box-body">
                     <div
@@ -69,7 +69,7 @@ class payrollScreen extends Component {
                                     aria-label="Rendering engine: activate to sort column descending"
                                     aria-sort="ascending"
                                   >
-                                    Employee Name
+                                    Courier's Name
                                   </th>
 
                                   <th
@@ -80,7 +80,7 @@ class payrollScreen extends Component {
                                     colspan="1"
                                     aria-label="Engine version: activate to sort column ascending"
                                   >
-                                    Employee Salary
+                                    Courier payment price
                                   </th>
                                   <th
                                     className="sorting"
@@ -92,16 +92,7 @@ class payrollScreen extends Component {
                                   >
                                     Employee Role
                                   </th>
-                                  <th
-                                    className="sorting"
-                                    tabindex="0"
-                                    aria-controls="example2"
-                                    rowspan="1"
-                                    colspan="1"
-                                    aria-label="soldProducts: activate to sort column ascending"
-                                  >
-                                    hiring date
-                                  </th>
+                              
                                   <th
                                     className="sorting"
                                     tabindex="0"
@@ -110,7 +101,7 @@ class payrollScreen extends Component {
                                     colspan="1"
                                     aria-label="sellingProgress: activate to sort column ascending"
                                   >
-                                    paying date
+                                  paying date
                                   </th>
                                 </tr>
                               </thead>
@@ -120,10 +111,13 @@ class payrollScreen extends Component {
                                   <td className="sorting_1">EmployeeX</td>
                                   <td className="">250birr</td>
                                   <td className="">Baker</td>
-                                  <td>20/3/20</td>
-                                  <td>prev Date + 30</td>
+                                  <td>
+                                    20/3/20
+                                  </td>
+                                 
                                 </tr>
                               </tbody>
+                           
                             </table>
                             <Button
                               variant="primary"
@@ -158,4 +152,4 @@ class payrollScreen extends Component {
   }
 }
 
-export default payrollScreen;
+export default CourierScreen;

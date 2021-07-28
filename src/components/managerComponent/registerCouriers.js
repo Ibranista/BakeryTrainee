@@ -15,7 +15,7 @@ import {
   Container,
 } from "@themesberg/react-bootstrap";
 import axios from "axios";
-class RegisterProduct extends Component {
+class CourierRegistration extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,7 +56,7 @@ class RegisterProduct extends Component {
         <Navbar />
         <Container>
           <Row>
-            <Col lg={3}>hello</Col>
+            <Col lg={3}></Col>
             <Col lg={6}>
               <Card border="light" className="bg-white shadow-sm mb-4">
                 <Card.Body>
@@ -65,27 +65,25 @@ class RegisterProduct extends Component {
                     <Row>
                       <Col md={6} className="mb-3">
                         <Form.Group id="productName">
-                          <Form.Label>Product Name</Form.Label>
+                          <Form.Label>Courier's Name</Form.Label>
                           <Form.Control
                             required
                             type="text"
-                            name="productName"
-                            placeholder="Enter product name"
-                            value={this.state.productName}
+                            name="courierName"
+                            placeholder="Enter Courier's Name"
                             onChange={this.onChange}
                             className="form-control"
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6} className="mb-3">
-                        <Form.Group id="productType">
-                          <Form.Label>Also Product Type</Form.Label>
+                        <Form.Group id="courierPayment">
+                          <Form.Label>Courier Payment in Cash</Form.Label>
                           <Form.Control
                             required
-                            type="text"
+                            type="Number"
                             name="productType"
-                            placeholder="Enter product type"
-                            value={this.state.productType}
+                            placeholder="Enter Courier's payment price"
                             onChange={this.onChange}
                             className="form-control"
                           />
@@ -95,11 +93,11 @@ class RegisterProduct extends Component {
                     </Row>
                     <Row className="align-items-center">
                       <Col md={6} className="mb-3">
-                        <Form.Group id="gender">
-                          <Form.Label>Product Price</Form.Label>
+                        <Form.Group id="paymentDate">
+                          <Form.Label>Paying Date</Form.Label>
                           <Form.Control
                             required
-                            type="Number"
+                            type="date"
                             name="productPrice"
                             placeholder="Enter product price"
                             value={this.state.productPrice}
@@ -111,7 +109,7 @@ class RegisterProduct extends Component {
                     </Row>
                     <Row></Row>
                     <Button variant="primary" type="submit" className="w-100">
-                      Create product
+                      Register Courier
                     </Button>
                   </Form>
                 </Card.Body>
@@ -124,4 +122,4 @@ class RegisterProduct extends Component {
   }
 }
 
-export default RegisterProduct;
+export default CourierRegistration;

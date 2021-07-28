@@ -22,6 +22,7 @@ import {
 } from "@themesberg/react-bootstrap";
 
 import Sidebar from "../Sidebar";
+import Navbar from "../Navbar";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -60,7 +61,8 @@ class Ingredients extends Component {
     const { ingredients } = this.state;
     return (
       <>
-      <Sidebar/>
+        <Sidebar />
+        <Navbar />
         <Container>
           <Row>
             <Col lg={3}></Col>

@@ -3,7 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AllRoutes from "./routes/route.js";
-
+import Navbar from "./components/Navbar";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";

@@ -4,6 +4,7 @@ import { Message } from "./Message.js";
 import { Loader } from "./Loader.js";
 import { Form } from "react-bootstrap";
 import Sidebar from "./Sidebar.js";
+import Navbar from "./Navbar.js";
 import {
   Container,
   Row,
@@ -21,14 +22,12 @@ class DisplayProducts extends Component {
     return (
       <>
         <Sidebar />
-
+        <Navbar />
         <Row>
           <Col lg={4}></Col>
           <Col>
             {" "}
-            <Link to="/registerProduct">
-              Add new product
-            </Link>
+            <Link to="/registerProduct">Add new product</Link>
           </Col>
         </Row>
 

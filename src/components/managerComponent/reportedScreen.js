@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Sidebar from "../Sidebar";
+import Navbar from "../Navbar";
 import axios from "axios";
 
 // personal styles
@@ -30,11 +31,13 @@ class ReportedScreen extends Component {
     return (
       <>
       <Sidebar/>
+      <Navbar />
+
         <Container>
           <Row>
             <Col lg={2}></Col>
-            <Col lg={7}>
-              <div className="col-xs-12" style={divStyle}>
+            <Col lg={10}>
+              <div className="col-xs-10" style={divStyle}>
                 <div className="box mr-8">
                   <div className="box-header">
                     <h4>Reports From Cashier</h4>
@@ -46,7 +49,7 @@ class ReportedScreen extends Component {
                     >
                       <div className="row">
                         <div className="col-sm-6"></div>
-                        <div className="col-sm-6"></div>
+                        <div className=""></div>
                       </div>
                       <div className="row">
                         <div className="col-sm-12">

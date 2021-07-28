@@ -18,8 +18,10 @@ import ReportScreen from "../components/cashierComponent/reportScreen.js";
 import ReportedScreen from "../components/managerComponent/reportedScreen.js";
 import ProductHistory from "../components/managerComponent/productHistory.js";
 import dashboard from "../components/managerComponent/dashboard.js";
-import CourierScreen from "../components/cashierComponent/curiourPayment.js";
-import payrollScreen from "../components/cashierComponent/payrollPayment.js"
+import CourierScreen from "../components/cashierComponent/courierPayment.js";
+import payrollScreen from "../components/cashierComponent/payrollPayment.js";
+import RegisterEmployee from "../components/cashierComponent/registerEmployees.js";
+import CourierRegistration from "../components/managerComponent/registerCouriers.js";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -51,29 +53,19 @@ class AllRoutes extends Component {
         <Router>
           <Route path="/signup" component={Signup} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
-          <PrivateRoute
-            path="/products"
-            component={DisplayProducts}
-          />
+          <PrivateRoute path="/products" component={DisplayProducts} />
 
           {/* Routes for Both */}
 
           <PrivateRoute path="/dashboard" component={dashboard} />
-          <PrivateRoute
-            path="/Courierpayment"
-            component={CourierScreen}
-          />
+          <PrivateRoute path="/Courierpayment" component={CourierScreen} />
+          <PrivateRoute path="/registerCourier" component={CourierRegistration} />
           <PrivateRoute path="/payroll" component={payrollScreen} />
 
           {/* Cashier Routes */}
-          <PrivateRoute
-            path="/ingredients"
-            component={DisplayIngredients}
-          />
-          <PrivateRoute
-            path="/reportScreen"
-            component={ReportScreen}
-          />
+          <PrivateRoute path="/ingredients" component={DisplayIngredients} />
+          <PrivateRoute path="/reportScreen" component={ReportScreen} />
+          <PrivateRoute path="/registerEmployees" component={RegisterEmployee} />
           {/* <PrivateRoute
             path="/dashboard/products/editIngredient/:id"
             component={EditProductIngredient}
@@ -94,11 +86,7 @@ class AllRoutes extends Component {
             path="/registerProduct"
             component={RegisterProduct}
           />
-          <PrivateRoute
-            exact
-            path="/reports"
-            component={ReportedScreen}
-          />
+          <PrivateRoute exact path="/reports" component={ReportedScreen} />
           <PrivateRoute
             exact
             path="/ProductHistory"

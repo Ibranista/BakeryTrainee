@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Sidebar from "../Sidebar";
+import Navbar from "../Navbar";
 
 class ReportScreen extends Component {
   constructor(props) {
@@ -28,12 +29,13 @@ class ReportScreen extends Component {
     return (
       <>
         <Sidebar />
+        <Navbar />
 
         <Container>
           <Row>
             <Col lg={3}></Col>
-            <Col lg={6}>
-              <div className="col-xs-12">
+            <Col lg={9}>
+              <div className="col-xs-9">
                 <div className="box">
                   <div className="box-header">
                     <h3 className="box-title">Product Report Table</h3>
@@ -179,12 +181,7 @@ class ReportScreen extends Component {
                             aria-live="polite"
                           ></div>
                         </div>
-                        <div className="col-sm-7">
-                          <div
-                            className="dataTables_paginate paging_simple_numbers"
-                            id="example2_paginate"
-                          ></div>
-                        </div>
+                        <div className="col-sm-7"></div>
                       </div>
                     </div>
                   </div>

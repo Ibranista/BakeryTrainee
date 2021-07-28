@@ -11,17 +11,20 @@ import {
   faFileAlt,
   faFileArchive,
   faHandHoldingUsd,
+  faPersonBooth,
   faSignOutAlt,
   faTable,
   faTimes,
+  faCar,
+  faPaperclip
 } from "@fortawesome/free-solid-svg-icons";
+import { Card, Accordion } from "react-bootstrap";
 import {
   Nav,
   Badge,
   Image,
   Button,
   Dropdown,
-  Accordion,
   Navbar,
 } from "@themesberg/react-bootstrap";
 import { Link } from "react-router-dom";
@@ -179,33 +182,57 @@ const SideBar = (props = {}) => {
             <Nav className="flex-column pt-3 pt-md-0">
               <NavItem title="Dashboard" link="/dashboard" icon={faChartPie} />
 
-              <NavItem
-                title="View Products"
-                icon={faCog}
-                link="/products"
-              />
-              <NavItem
-                title="View Report"
-                icon={faCog}
-                link="/reports"
-              />
+              <NavItem title="View Products" icon={faBoxOpen} link="/products" />
+              <NavItem title="View Report" icon={faPaperclip} link="/reports" />
               <NavItem
                 title="Product History"
                 icon={faFileAlt}
                 link="/ProductHistory"
               />
-              <NavItem
-                title="Payroll"
-                icon={faFileArchive}
-                link="/payroll"
-              />
-              <NavItem
-                title="Courier"
-                icon={faFileArchive}
-                link="/Courierpayment"
-              />
 
               <Dropdown.Divider className="my-3 border-indigo" />
+
+              <Accordion defaultActiveKey="0">
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                  <NavItem title="Payroll" icon={faPersonBooth} />
+                </Accordion.Toggle>
+
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    <NavItem
+                      title="Add Employees"
+                      icon={faPersonBooth}
+                      link="/registerEmployees"
+                    />
+                    <NavItem
+                      title="Payroll Management"
+                      icon={faPersonBooth}
+                      link="/payroll"
+                    />
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Accordion>
+
+              <Accordion defaultActiveKey="0">
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                  <NavItem title="Couriers" icon={faCar} />
+                </Accordion.Toggle>
+
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    <NavItem
+                      title="Add Courier"
+                      icon={faCar}
+                      link="/registerCourier"
+                    />
+                    <NavItem
+                      title="Courier Payment"
+                      icon={faCar}
+                      link="/Courierpayment"
+                    />
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Accordion>
             </Nav>
           </div>
         </SimpleBar>

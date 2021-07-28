@@ -3,14 +3,19 @@ import SimpleBar from "simplebar-react";
 import { useLocation } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Card, Accordion } from "react-bootstrap";
 import {
   faBook,
   faBoxOpen,
   faCar,
   faChartPie,
   faCog,
+  faDolly,
+  faDonate,
   faFileAlt,
   faHandHoldingUsd,
+  faPaperclip,
+  faPersonBooth,
   faSignOutAlt,
   faTable,
   faTimes,
@@ -21,7 +26,6 @@ import {
   Image,
   Button,
   Dropdown,
-  Accordion,
   Navbar,
 } from "@themesberg/react-bootstrap";
 import { Link } from "react-router-dom";
@@ -181,32 +185,17 @@ const SideBar = (props = {}) => {
             <Nav className="flex-column pt-3 pt-md-0">
               <NavItem title="Dashboard" link="/dashboard" icon={faChartPie} />
 
-              <NavItem
-                title="View Products"
-                icon={faCog}
-                link="/products"
-              />
+              <NavItem title="View Products" icon={faBoxOpen} link="/products" />
               <NavItem
                 title="Product Ingredients"
-                icon={faCog}
+                icon={faDolly}
                 link="/ingredients"
               />
               <NavItem
                 title="Report Sold Products"
-                icon={faCog}
+                icon={faPaperclip}
                 link="/reportScreen"
               />
-              <NavItem
-                title="Courier Payments"
-                icon={faCar}
-                link="/Courierpayment"
-              />
-              <NavItem
-                title="Payroll Management"
-                icon={faCar}
-                link="/payroll"
-              />
-
               <Dropdown.Divider className="my-3 border-indigo" />
             </Nav>
           </div>

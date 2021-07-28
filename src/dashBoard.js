@@ -11,7 +11,7 @@ class Dashboard extends Component {
     return (
       <>
         <Sidebar />
-        <Navbar className="" />
+        <Navbar />
       </>
     );
   }
